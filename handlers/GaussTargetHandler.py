@@ -20,4 +20,5 @@ class GaussTargetHandler(BaseHandler):
 
         for f in files:
             fileName, fileExtension = os.path.splitext(f)
-            self.saveFile(fileName, os.path.join(directory, f))
+            print os.path.basename(fileName), f
+            self.saveFile(os.path.basename(fileName), f)
